@@ -6,12 +6,12 @@
 /*   By: lucpardo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 17:06:51 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/04/28 17:49:04 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/04/28 18:56:49 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 int	ft_isalpha(char letter)
 {
-	if (letter >= 'a' && letter <= 'z' || letter >= 'A' && letter <= 'Z')
+	if ((letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z'))
 	{
 		return (1);
 	}
@@ -20,9 +20,11 @@ int	ft_isalpha(char letter)
 		return (0);
 	}
 }
-/*#include <stdio.h>
+/*
+#include <stdio.h>
 int	main(void)
 {
 	printf("%d \n", ft_isalpha('5'));
+	printf("%d \n", ft_isalpha('a'));
 	return (0);
 }*/
