@@ -18,7 +18,7 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `strlcpy`
 * `strlcat`
 * `atoi`
-* `strdup`
+* `strdup`*
 
 ### Memory Manipulation Functions
 
@@ -28,4 +28,6 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `memmove`
 * `memchr`
 * `memcmp`
-* `calloc`
+* `calloc`*
+
+`*` need malloc()
