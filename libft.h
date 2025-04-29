@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:47:40 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/04/29 18:47:51 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/04/29 23:13:08 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ int		ft_isalnum(int param);
 int		ft_isascii(int ascii);
 int		ft_isprint(int value);
 size_t	ft_strlen(const char *str);
+char	*ft_strchr(const char *str, int c);
 
 #endif
