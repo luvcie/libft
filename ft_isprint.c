@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:21:41 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/04/28 19:56:11 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/04/29 18:49:21 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int	ft_isprint(int value)
 	}
 }	
 
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	printf("%d \n", ft_isprint('\t'));
 	printf("%d \n", ft_isprint('t'));
 	printf("%d \n", ft_isprint('6'));
 	printf("%d \n", ft_isprint(999));
-}
+}*/
