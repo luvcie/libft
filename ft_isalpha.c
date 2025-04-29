@@ -9,7 +9,7 @@
 /*   Updated: 2025/04/28 18:56:49 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isalpha(char letter)
+int	ft_isalpha(int letter)
 {
 	if ((letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z'))
 	{

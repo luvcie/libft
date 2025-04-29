@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(char param)
+int	ft_isalnum(int param)
 {
 	if ((param >= 'a' && param <= 'z') || (param >= 'A' && param <= 'Z'))
 	{
