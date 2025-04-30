@@ -6,28 +6,38 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 17:44:31 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/04/30 18:23:06 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/01 01:17:41 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	
-	if (big == NULL || little == NULL)
-	{
+	size_t	lilen;
+
+	if (*little == '\0')
+		return ((char *)big);
+	if (big == NULL)
 		return (NULL);
-	}
 	if (len == 0)
-	{
 		return (NULL);
-	}
+	lilen = ft_strlen(little);
 	i = 0;
-	while (i < len && big[i] != '\0')
+	while (i + lilen <= len && big[i] != '\0')
 	{
-		ft_strncmp(big, little, len)
+		if (ft_strncmp(big + i, little, lilen) == 0)
+		{
+			return ((char *)big + i);
+		}
+		i++;
 	}
 	return (NULL);
 }
+
+/*#include <stdio.h>
+int	main(void)
+{
+	printf("%s\n", ft_strnstr("heat from fire fire from heat", "from fire", 90));
+	return (0);
+}*/
