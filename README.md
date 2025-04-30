@@ -13,7 +13,7 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `strlen`  Calculates the length of a string excluding '\0'.
 * `strchr`  Returns a pointer to the first occurrence of the character c in the string s.
 * `strrchr` Returns a pointer to the last occurrence of the character c in the string s.
-* `strncmp`
+* `strncmp` Compares the first n bytes of two strings and returns an integer indicating the result of the comparison. 
 * `strnstr`
 * `strlcpy`
 * `strlcat`
