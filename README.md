@@ -14,8 +14,8 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `strchr`  Returns a pointer to the first occurrence of the character c in the string s.
 * `strrchr` Returns a pointer to the last occurrence of the character c in the string s.
 * `strncmp` Compares the first n bytes of two strings and returns an integer indicating the result of the comparison. 
-* `strnstr`
-* `strlcpy`
+* `strnstr` Locates a substring in the first n bytes of a string.
+* `strlcpy` 
 * `strlcat`
 * `atoi`
 * `strdup`*
