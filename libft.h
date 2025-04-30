@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:47:40 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/04/30 17:21:06 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/04/30 22:03:11 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #define LIBFT_H
 
 #include <strings.h>
+#include <stdlib.h>
 
 int		ft_isalpha(int letter);
 int		ft_isdigit(int digit);
