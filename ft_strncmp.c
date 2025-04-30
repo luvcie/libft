@@ -6,11 +6,10 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 16:11:48 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/04/30 17:17:36 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/04/30 17:23:07 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -35,9 +34,9 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
-
+/*#include <stdio.h>
 int	main(void)
 {
 	printf("%d \n", ft_strncmp("hello", "world", 4));
 	return (0);
-}
+}*/
