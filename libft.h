@@ -6,15 +6,15 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:47:40 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/01 22:53:58 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/02 00:50:45 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
-#include <strings.h>
-#include <stdlib.h>
+# include <strings.h>
+# include <stdlib.h>
 
 int		ft_isalpha(int letter);
 int		ft_isdigit(int digit);
