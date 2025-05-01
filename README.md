@@ -15,8 +15,8 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `strrchr` Returns a pointer to the last occurrence of the character c in the string s.
 * `strncmp` Compares the first n bytes of two strings and returns an integer indicating the result of the comparison. 
 * `strnstr` Locates a substring in the first n bytes of a string.
-* `strlcpy` 
-* `strlcat`
+* `strlcpy` Safely copies the NUL-terminated string src to the buffer dst (up to size bytes), guarantees NUL-termination (if size > 0), and returns the total length of src. 
+* `strlcat` Safely appends the NUL-terminated string src to the end of dst (within size total bytes for dst), guarantees NUL-termination (if space exists), and returns the combined length of the original dst plus the length of src.
 * `atoi`
 * `strdup`*
 
