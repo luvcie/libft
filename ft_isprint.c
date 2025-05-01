@@ -6,10 +6,9 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:21:41 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/04/29 18:49:21 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/02 00:27:03 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 int	ft_isprint(int value)
 {
 	if (value >= 32 && value <= 126)
@@ -20,7 +19,7 @@ int	ft_isprint(int value)
 	{
 		return (0);
 	}
-}	
+}
 
 /*#include <stdio.h>
 int	main(void)
