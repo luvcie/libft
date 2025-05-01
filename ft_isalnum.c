@@ -6,12 +6,12 @@
 /*   By: lucpardo <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 17:29:12 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/04/29 19:43:06 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/01 19:52:29 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-int		ft_isalnum(int param)
+int	ft_isalnum(int param)
 {
 	if (ft_isalpha(param) || ft_isdigit(param))
 	{
