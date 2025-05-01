@@ -12,6 +12,7 @@ SRCS =	ft_isalpha.c \
 	ft_isprint.c \
 	ft_strlen.c \
 	ft_strlcpy.c \
+	ft_strlcat.c \
 	ft_strchr.c \
 	ft_strchr.c \
 	ft_strrchr.c \
