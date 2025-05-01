@@ -6,14 +6,14 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 21:09:41 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/04/29 23:10:15 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/01 19:53:51 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 char	*ft_strchr(const char *str, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
