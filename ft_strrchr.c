@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/30 00:53:15 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/04/30 11:21:03 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/01 21:15:45 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strrchr(const char *str, int c)
 	else
 	{
 		i = i - 1;
-		while (str[i] >= 0)
+		while (i >= 0)
 		{
 			if (str[i] == c)
 			{
