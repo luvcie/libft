@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 18:49:02 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/04/28 20:20:52 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/02 00:29:08 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_strlen(const char	*str)
 	while (str[i] != '\0')
 	{
 		i++;
-	}	
+	}
 	return (i);
 }
 /*#include <stdio.h>
