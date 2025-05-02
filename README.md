@@ -23,8 +23,8 @@ Reimplementing specific libc functions and creating custom C functions for strin
 ### Memory Manipulation Functions
 
 * `memset` Fills memory with a constant byte.
-* `bzero`
-* `memcpy`
+* `bzero` Fills memory with zero bytes.
+* `memcpy` Copies memory area.
 * `memmove`
 * `memchr`
 * `memcmp`
