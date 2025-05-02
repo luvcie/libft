@@ -18,7 +18,7 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `strlcpy` Safely copies the NUL-terminated string src to the buffer dst (up to size bytes), guarantees NUL-termination (if size > 0), and returns the total length of src. 
 * `strlcat` Safely appends the NUL-terminated string src to the end of dst (within size total bytes for dst), guarantees NUL-termination (if space exists), and returns the combined length of the original dst plus the length of src.
 * `atoi` Converts initial portion of string to int.
-* `strdup`*
+* `strdup`* Duplicates a string using allocated memory.
 
 ### Memory Manipulation Functions
 
