@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:47:40 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/02 19:15:18 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/03 18:20:17 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -31,5 +31,6 @@ int	ft_atoi(const char *str);
 char	*ft_strdup(const char	*s);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void	*s, size_t	n);
+void	*ft_memcpy(void *dst, const void *src, size_t n);
 
 #endif
