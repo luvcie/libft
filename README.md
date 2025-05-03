@@ -30,6 +30,6 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `memmove` Copies memory area, handling overlap.
 * `memchr` Scans memory for a character.
 * `memcmp` Compares memory areas.
-* `calloc`*
+* `calloc`* Allocates memory for an array of elements and initializes all bits of the allocated memory to zero.
 
 `*` need malloc()
