@@ -25,9 +25,9 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `memset` Fills memory with a constant byte.
 * `bzero` Fills memory with zero bytes.
 * `memcpy` Copies memory area.
-* `memmove`
-* `memchr`
-* `memcmp`
+* `memmove` Copies memory area, handling overlap.
+* `memchr` Scans memory for a character.
+* `memcmp` Compares memory areas.
 * `calloc`*
 
 `*` need malloc()
