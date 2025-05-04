@@ -33,3 +33,17 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `calloc`* Allocates memory for an array of elements and initializes all bits of the allocated memory to zero.
 
 `*` need malloc()
+
+## Additional functions
+
+* `substr`
+* `strjoin`
+* `strtrim`
+* `split`
+* `itoa`
+* `strmapi`
+* `striteri`
+* `putchar_fd`
+* `putstr_fd`
+* `putendl_fd`
+* `putnbr_fd`
