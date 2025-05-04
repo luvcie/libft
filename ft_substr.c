@@ -11,16 +11,39 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void	*ft_substr(char const *srcstr, unsigned int start, size_t len)
+static char	*ft_alloc_empty_str(void)
 {
-	char	*sub_str;
-	size_t	str_len;
-	size_t	s_len;
-	size_t	alloc_len;
+	char	*ptr;
+
+	ptr = malloc(1);
+	if (ptr == NULL)
+		return (NULL);
+	ptr[0] = '\0';
+	return (ptr);
+}
+
+char	*ft_substr(char const *srcstr, unsigned int start, size_t len)
+{
+	char	*ptr;
 	size_t	i;
+	size_t	slen;
 
 	if (srcstr == NULL)
 		return (NULL);
-	s_len = ft_strlen(srcstr);	
-	while (........................................................)
+	slen = ft_strlen(srcstr);
+	if (start >= slen)
+		return (ft_alloc_empty_str());
+	if (len > slen - start)
+		len = slen - start;
+	ptr = malloc(len + 1);
+	if (ptr == NULL)
+		return (NULL);
+	i = 0;
+	while (i < len)
+	{
+		ptr[i] = srcstr[start + i];
+		i++;
+	}
+	ptr[len] = '\0';
+	return (ptr);
 }
