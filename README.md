@@ -36,6 +36,8 @@ Reimplementing specific libc functions and creating custom C functions for strin
 
 ## Additional functions
 
+### String manipulation
+
 * `ft_substr` Allocates and returns a substring from string 's', starting at index 'start' with a maximum length 'len'.
 * `ft_strjoin` Allocates and returns a new string, result of the concatenation of 's1' and 's2'.
 * `ft_strtrim` Allocates and returns a copy of 's1' with characters from 'set' removed from the beginning and end.
@@ -43,6 +45,9 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `ft_itoa` Allocates and returns a string representing the integer 'n' received; handles negative numbers.
 * `ft_strmapi` Applies function 'f' to each character of 's' (with index) to create a new allocated string.
 * `ft_striteri` Applies function 'f' to each character of string 's' (with index), passing the character's address for modification.
+
+### I/O
+
 * `ft_putchar_fd` Outputs the character 'c' to the given file descriptor 'fd'.
 * `ft_putstr_fd` Outputs the string 's' to the given file descriptor 'fd'.
 * `ft_putendl_fd` Outputs the string 's' to the given file descriptor 'fd', followed by a newline.
