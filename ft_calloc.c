@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 21:10:03 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/03 22:33:36 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/04 02:29:23 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -37,3 +37,16 @@ void	*ft_calloc(size_t nmemb, size_t	size)
 	ft_bzero(ptr, total);
 	return (ptr);
 }
+/*#include <stdio.h>
+int	main(void)
+{
+	void	*ptr = ft_calloc(30, 100);
+	if (ptr)
+	{
+		printf("%p \n", ptr);
+	}
+	else
+	{
+		return (0);
+	}
+}*/
