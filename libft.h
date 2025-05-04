@@ -40,5 +40,6 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+char	*ft_substr(char const *srcstr, unsigned int start, size_t len);
 
 #endif
