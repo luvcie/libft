@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:47:40 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/04 02:03:41 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/05 11:59:04 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -41,5 +41,6 @@ void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_substr(char const *srcstr, unsigned int start, size_t len);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
