@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 02:48:41 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/05 08:33:31 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/05 08:45:45 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -29,9 +29,9 @@ char	*ft_substr(char const *str, unsigned int start, size_t len)
 	ft_strlcpy(ptr, str + start, len + 1);
 	return (ptr);
 }
-#include <stdio.h>
+/*#include <stdio.h>
 int	main(void)
 {
 	printf("%s \n", ft_substr("when rain drops", 4, 10));
 	return (0);
-}
+}*/
