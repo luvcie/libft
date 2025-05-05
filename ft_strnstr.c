@@ -18,13 +18,9 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	if (*little == '\0')
 		return ((char *)big);
-	if (big == NULL)
-		return (NULL);
-	if (len == 0)
-		return (NULL);
 	lilen = ft_strlen(little);
 	i = 0;
-	while (i + lilen <= len && big[i] != '\0')
+	while (big[i] != '\0' && i + lilen <= len)
 	{
 		if (ft_strncmp(big + i, little, lilen) == 0)
 		{
