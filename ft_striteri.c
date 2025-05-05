@@ -10,12 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-char	ft_striteri(char *s, void (*f)(unsigned int, char*))
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
+	size_t	i;
 
-
+	if (s == NULL || f == NULL)
+		return ;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		f(i, &s[i]);
+		i++;
+	}
 }
-// c: character to output
-// fd: the file descriptor on which to write.
-// external fs: write()
-// descr: outputs the character c to the specified file descriptor
