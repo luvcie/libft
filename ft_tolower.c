@@ -18,7 +18,7 @@ int	ft_tolower(int c)
 		c += 32;
 		return (c);
 	}
-	return (0);
+	return (c);
 }
 /*#include <stdio.h>
 int	main(void)
