@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 15:45:46 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/05 15:45:47 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/05 16:39:11 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -40,4 +40,4 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 // string s, passing its index as the first argument
 // and the character itself as the second. A new
 // string is created (using malloc(3)) to store the
-// results from the successive applications of f.
+// results from the successive applications of f. 
