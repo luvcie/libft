@@ -6,7 +6,7 @@
 #    By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/05 19:31:51 by lucpardo          #+#    #+#              #
-#    Updated: 2025/05/05 21:29:25 by lucpardo         ###   ########.fr        #
+#    Updated: 2025/05/05 21:44:16 by lucpardo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 CC = cc
@@ -46,6 +46,7 @@ SRCS =	ft_isalpha.c \
 	ft_striteri.c \
 	ft_putchar_fd.c \
 	ft_putstr_fd.c \
+	ft_putendl_fd.c \
 
 OBJS = $(SRCS:.c=.o)
 
