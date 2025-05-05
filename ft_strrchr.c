@@ -21,22 +21,19 @@ char	*ft_strrchr(const char *str, int c)
 	{
 		++i;
 	}
-	if (str[i] == '\0' && c == '\0')
+	if ((unsigned char)c == '\0')
 	{
 		return ((char *)str + i);
 	}
-	else
-	{
 		i = i - 1;
 		while (i >= 0)
 		{
-			if (str[i] == c)
+			if (str[i] == (unsigned char)c)
 			{
 				return ((char *)str + i);
 			}
 			--i;
 		}
-	}
 	return (NULL);
 }
 
