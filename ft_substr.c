@@ -6,44 +6,32 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 02:48:41 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/04 23:54:55 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/05 08:33:31 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-static char	*ft_alloc_empty_str(void)
-{
-	char	*ptr;
-
-	ptr = malloc(1);
-	if (ptr == NULL)
-		return (NULL);
-	ptr[0] = '\0';
-	return (ptr);
-}
-
 char	*ft_substr(char const *str, unsigned int start, size_t len)
 {
 	char	*ptr;
-	size_t	i;
 	size_t	slen;
 
 	if (str == NULL)
 		return (NULL);
 	slen = ft_strlen(str);
 	if (start >= slen)
-		return (ft_alloc_empty_str());
+		return (ft_strdup(""));
 	if (len > slen - start)
 		len = slen - start;
 	ptr = malloc(len + 1);
 	if (ptr == NULL)
 		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		ptr[i] = str[start + i];
-		i++;
-	}
-	ptr[len] = '\0';
+	ft_strlcpy(ptr, str + start, len + 1);
 	return (ptr);
+}
+#include <stdio.h>
+int	main(void)
+{
+	printf("%s \n", ft_substr("when rain drops", 4, 10));
+	return (0);
 }
