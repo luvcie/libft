@@ -3,7 +3,7 @@ Reimplementing specific libc functions and creating custom C functions for strin
 
 ## Functions from libc
 
-### String Manipulation Functions
+### String Manipulation 
 
 * `isalpha` Checks for an alphabetic character.
 * `isdigit` Checks for a digit (0 through 9).
@@ -22,8 +22,7 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `atoi` Converts initial portion of string to int.
 * `strdup`* Duplicates a string using allocated memory.
 
-### Memory Manipulation Functions
-
+### Memory Manipulation 
 * `memset` Fills memory with a constant byte.
 * `bzero` Fills memory with zero bytes.
 * `memcpy` Copies memory area.
@@ -52,3 +51,16 @@ Reimplementing specific libc functions and creating custom C functions for strin
 * `ft_putstr_fd` Outputs the string 's' to the given file descriptor 'fd'.
 * `ft_putendl_fd` Outputs the string 's' to the given file descriptor 'fd', followed by a newline.
 * `ft_putnbr_fd` Outputs the integer 'n' to the given file descriptor 'fd'.
+
+## Bonus
+
+### Linked lists
+* `ft_lstnew` Allocates and returns a new node with the given content and a NULL next pointer.
+* `ft_lstadd_front` Adds the node 'new' at the beginning of the list.
+* `ft_lstsize` Counts and returns the number of nodes in a list.
+* `ft_lstlast` Returns the last node of the list.
+* `ft_lstadd_back` Adds the node 'new' at the end of the list.
+* `ft_lstdelone` Takes a node and frees its content using the function 'del', then frees the node itself but not its successor.
+* `ft_lstclear` Deletes and frees a node and all its successors using 'del'
+* `ft_lstiter` Iterates through the list and applies the function 'f' to the content of each node. 
+* `ft_lstmap` Creates a new list by applying function 'f' to each node's content from the original list; uses 'del' to free content if needed.
