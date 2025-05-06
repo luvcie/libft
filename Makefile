@@ -6,7 +6,7 @@
 #    By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/05 19:31:51 by lucpardo          #+#    #+#              #
-#    Updated: 2025/05/06 12:17:51 by lucpardo         ###   ########.fr        #
+#    Updated: 2025/05/06 12:24:49 by lucpardo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 CC = cc
@@ -48,9 +48,9 @@ SRCS =	ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_strjoin.c \
 
-SRCS_BONUS =  ft_lstnew.c \
-	ft_lstadd_front.c \
-	ft_lstsize.c \
+SRCS_BONUS =  ft_lstnew_bonus.c \
+	ft_lstadd_front_bonus.c \
+	ft_lstsize_bonus.c \
 
 OBJS = $(SRCS:.c=.o)
 
