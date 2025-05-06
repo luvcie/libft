@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/06 15:08:58 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/06 18:39:19 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/06 19:15:05 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -22,8 +22,13 @@ t_list	*ft_lstnew(void *content)
 	element -> content = content;
 	return (element);
 }
-/*)#include <stdio.h>
+/*#include <stdio.h>
 int main(void)
 {
-	printf("%p \n", ft_lstnew("linked")->content, ft_lstnew("lists!")->next);
+	t_list *head = ft_lstnew("chair, table, floor, sofa, piano");
+	head->next = ft_lstnew("person, bottle, furniture, pillow, music");
+	
+	printf("linked list:| %s | %s |\n",(char *)head->content, 
+	(char *)head->next->content);
+	return (0);
 }*/
