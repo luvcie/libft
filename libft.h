@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 18:47:40 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/06 20:07:10 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/06 20:38:17 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -57,5 +57,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
+int	ft_lstsize(t_list *lst);
 
 #endif
