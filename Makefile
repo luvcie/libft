@@ -6,7 +6,7 @@
 #    By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/05 19:31:51 by lucpardo          #+#    #+#              #
-#    Updated: 2025/05/05 21:44:16 by lucpardo         ###   ########.fr        #
+#    Updated: 2025/05/06 12:13:58 by lucpardo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 CC = cc
@@ -40,7 +40,6 @@ SRCS =	ft_isalpha.c \
 	ft_toupper.c \
 	ft_tolower.c \
 	ft_substr.c \
-	ft_substr.c \
 	ft_strtrim.c \
 	ft_strmapi.c \
 	ft_striteri.c \
@@ -49,7 +48,13 @@ SRCS =	ft_isalpha.c \
 	ft_putendl_fd.c \
 	ft_strjoin.c \
 
+SRCS_BONUS =	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+
 OBJS = $(SRCS:.c=.o)
+
+OBJS_BONUS = $(SRCS_BONUS:.c=.o)
 
 all: $(NAME)
 
@@ -57,11 +62,15 @@ $(NAME) : $(OBJS)
 	$(AR) $(NAME) $(OBJS)
 	@echo "libft.a built!"
 
-%.o: %.c libft.h # Make .o depend on .c AND the header file libft.h
+%.o: %.c libft.h
 	$(CC) $(CFLAGS) -c $< -o $@
 
+bonus: $(NAME) $(OBJS_BONUS)
+		$(AR) $(NAME) $(OBJS_BONUS)
+		@echo "libft.a built with bonus functions!"
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BONUS)
 	@echo "objects vacuumed!"
 
 fclean: clean
@@ -70,4 +79,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
