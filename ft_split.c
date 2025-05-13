@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 11:08:19 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/13 15:26:23 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/13 22:30:00 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -130,5 +130,5 @@ int	main(void)
 	printf("%d \n", ft_arrays_counter(" hello   world my name is lucy", ' '));
 	printf("%d \n", ft_arrays_counter("hello world my name is lucy ", ' '));
 	printf("%d \n", ft_arrays_counter("hello world my name is lucy", ' '));
-	return (0);
+	return(0);
 }*/
