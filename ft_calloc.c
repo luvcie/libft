@@ -6,7 +6,7 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 21:10:03 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/04 02:29:23 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/08 18:17:36 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -16,16 +16,6 @@ void	*ft_calloc(size_t nmemb, size_t	size)
 	char	*ptr;
 	size_t	total;
 
-	if (nmemb == 0 || size == 0)
-	{
-		ptr = malloc(1);
-		if (ptr == NULL)
-		{
-			return (NULL);
-		}
-		ft_bzero(ptr, 1);
-		return (ptr);
-	}
 	if (size != 0 && nmemb > (INT_MAX / size))
 		return (NULL);
 	total = nmemb * size;
