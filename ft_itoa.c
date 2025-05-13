@@ -6,34 +6,55 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/05 12:06:02 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/13 16:08:38 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/13 16:34:19 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
-char	ft_itoa(int nb)
+static size_t	ft_sign(char *str, long *nbl)
 {
-	char	c;
-	long	nbl;
-
-	nbl = nb;
-	if (nbl < 0)
+	if (*nbl == 0)
+		str[0] = '0';
+	if (*nbl < 0)
 	{
-		write(1, "-", 1);
-		nbl = -nbl;
+		str[0] = '-';
+		*nbl = -*nbl;
+		return (1);
 	}
-
-	if (nbl > 9)
-	ft_itoa(nbl/10);
-	c = (nbl % 10) + '0';
-	write(1, &c, 1);
-	return (nbl);
+	return (0);
 }
 
-/*#include <stdio.h>
+char	*ft_itoa(int nb)
+{
+	long	nbl;
+	size_t	i;
+	size_t	extract;
+	int		valid_digits;
+	char	str[12];
+
+	nbl = nb;
+	valid_digits = 0;
+	extract = 1000000000;
+	ft_bzero(str, 12);
+	i = ft_sign(str, &nbl);
+	while (extract != 0)
+	{
+		if (nbl / extract != 0 || valid_digits != 0)
+		{
+			str[i++] = (nbl / extract) + '0';
+			valid_digits++;
+		}
+		nbl %= extract;
+		extract /= 10;
+	}
+	return (ft_strdup(str));
+}
+/*))#include <stdio.h>
 int main(void)
 {
-	ft_itoa(1024);
-	ft_itoa(-1024);
+	printf("%s\n", ft_itoa(1024));
+	printf("%s\n", ft_itoa(-1024));
+	printf("%s\n", ft_itoa(INT_MAX));
+	printf("%s\n", ft_itoa(INT_MIN));
 	return (0);
 }*/
