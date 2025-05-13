@@ -49,6 +49,7 @@ SRCS = ft_isalpha.c \
 	ft_putnbr_fd.c \
 	ft_strjoin.c \
 	ft_itoa.c \
+	ft_split.c \
 
 SRCS_BONUS = ft_lstnew_bonus.c \
 			 ft_lstadd_front_bonus.c \
