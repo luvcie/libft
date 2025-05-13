@@ -44,7 +44,6 @@ char	*ft_strndup(const char *s, size_t n)
 	size_t	len2dup;
 
 	inputstrlen = ft_strlen(s);
-
 	if (inputstrlen < n)
 		len2dup = inputstrlen;
 	else
@@ -58,14 +57,70 @@ char	*ft_strndup(const char *s, size_t n)
 		dest[i] = s[i];
 		i++;
 	}
-	dest[i] '\0';
+	dest[i] = '\0';
 	return (dest);
+}
+
+static int	ft_next_word(char **slot, const char **i, char c)
+{
+	const char	*ptr;
+	size_t		len;
+
+	while (**i != '\0' && **i == c)
+		(*i)++;
+	ptr = *i;
+	while (**i != '\0' && **i != c)
+		(*i)++;
+	len = (size_t)(*i - ptr);
+	*slot = ft_strndup(ptr, len);
+	if (*slot == NULL)
+		return (0);
+	return (1);
+}
+
+static void	ft_free(char **array_of_arrays, size_t words_nbr)
+{
+	size_t	i;
+
+	i = 0;
+	if (array_of_arrays == NULL)
+		return ;
+	while (i < words_nbr)
+	{
+		free(array_of_arrays[i]);
+		i++;
+	}
+	free(array_of_arrays);
 }
 
 char	**ft_split(char const *s, char c)
 {
-}
+	char		**result;
+	size_t		words;
+	size_t		i;
+	const char	*j;
 
+	if (s == NULL)
+		return (NULL);
+	words = ft_arrays_counter((char *)s, c);
+	result = (char **)malloc((words + 1) * sizeof(char *));
+	if (result == NULL)
+		return (NULL);
+	j = s;
+	i = 0;
+	while (i < words)
+	{
+		if (!ft_next_word(&result[i], &j, c))
+		{
+			ft_free(result, i);
+			return (NULL);
+		}
+		i++;
+	}
+	result[words] = NULL;
+	return (result);
+}
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -74,5 +129,6 @@ int	main(void)
 	printf("%d \n", ft_arrays_counter(" hello world my name is lucy", ' '));
 	printf("%d \n", ft_arrays_counter(" hello   world my name is lucy", ' '));
 	printf("%d \n", ft_arrays_counter("hello world my name is lucy ", ' '));
+	printf("%d \n", ft_arrays_counter("hello world my name is lucy", ' '));
 	return (0);
-}
+}*/
