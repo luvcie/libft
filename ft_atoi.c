@@ -6,9 +6,10 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/02 01:24:21 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/02 02:02:01 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/13 15:54:13 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
 int	ft_atoi(const char	*str)
 {
