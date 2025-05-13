@@ -6,7 +6,7 @@
 #    By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/05/05 19:31:51 by lucpardo          #+#    #+#              #
-#    Updated: 2025/05/07 12:58:06 by lucpardo         ###   ########.fr        #
+#    Updated: 2025/05/14 01:08:43 by lucpardo         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 CC = cc
@@ -59,6 +59,7 @@ SRCS_BONUS = ft_lstnew_bonus.c \
 			 ft_lstdelone_bonus.c \
 			 ft_lstclear_bonus.c \
 			 ft_lstiter_bonus.c \
+			 ft_lstmap_bonus.c \
 
 OBJS = $(SRCS:.c=.o)
 
