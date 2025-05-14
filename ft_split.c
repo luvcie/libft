@@ -6,129 +6,116 @@
 /*   By: lucpardo <lucpardo@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/04 11:08:19 by lucpardo          #+#    #+#             */
-/*   Updated: 2025/05/13 22:30:00 by lucpardo         ###   ########.fr       */
+/*   Updated: 2025/05/14 19:43:58 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-int	ft_arrays_counter(char *str, char c)
+// j tracks number of words
+// flag is a bool state flag to know if inside of word
+static int	ft_count_words(const char *str, char c)
 {
 	int	i;
 	int	j;
-	int	new_word;
+	int	flag;	
 
 	i = 0;
 	j = 0;
-	new_word = 1;
+	flag = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] != c && new_word == 1)
+		if (str[i] != c && flag == 0)
 		{
+			flag = 1;
 			j++;
-			new_word = 0;
 		}
 		else if (str[i] == c)
 		{
-			new_word = 1;
+			flag = 0;
 		}
 		i++;
 	}
 	return (j);
 }
+// ignores delimiter char
+// finds len of next word until delimiter
+// allocates space for new word and copies extracted word to n
 
-char	*ft_strndup(const char *s, size_t n)
+static char	*ft_extract_word(const char **str, char c)
 {
-	size_t	i;
-	char	*dest;
-	size_t	inputstrlen;
-	size_t	len2dup;
+	const char	*start;
+	char		*word;
+	int			len;
 
-	inputstrlen = ft_strlen(s);
-	if (inputstrlen < n)
-		len2dup = inputstrlen;
-	else
-		len2dup = n;
-	dest = (char *)malloc(len2dup + 1);
-	if (dest == NULL)
+	while (**str == c)
+	{
+		(*str)++;
+	}
+	start = *str;
+	while (**str && **str != c)
+	{
+		(*str)++;
+	}
+	len = *str - start;
+	word = (char *)malloc(sizeof(char) * (len + 1));
+	if (!word)
 		return (NULL);
-	i = 0;
-	while (i < len2dup)
-	{
-		dest[i] = s[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
+	ft_strlcpy(word, start, len + 1);
+	return (word);
 }
 
-static int	ft_next_word(char **slot, const char **i, char c)
+static void	ft_free_array(char **array, int size)
 {
-	const char	*ptr;
-	size_t		len;
-
-	while (**i != '\0' && **i == c)
-		(*i)++;
-	ptr = *i;
-	while (**i != '\0' && **i != c)
-		(*i)++;
-	len = (size_t)(*i - ptr);
-	*slot = ft_strndup(ptr, len);
-	if (*slot == NULL)
-		return (0);
-	return (1);
-}
-
-static void	ft_free(char **array_of_arrays, size_t words_nbr)
-{
-	size_t	i;
+	int	i;
 
 	i = 0;
-	if (array_of_arrays == NULL)
-		return ;
-	while (i < words_nbr)
+	while (i < size)
 	{
-		free(array_of_arrays[i]);
+		free(array[i]);
 		i++;
 	}
-	free(array_of_arrays);
+	free(array);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char		**result;
-	size_t		words;
-	size_t		i;
-	const char	*j;
+	char	**result;
+	int		word_count;
+	int		i;
 
-	if (s == NULL)
+	if (s == 0)
 		return (NULL);
-	words = ft_arrays_counter((char *)s, c);
-	result = (char **)malloc((words + 1) * sizeof(char *));
-	if (result == NULL)
+	word_count = ft_count_words(s, c);
+	result = (char **)malloc(sizeof(char *) * (word_count + 1));
+	if (result == 0)
 		return (NULL);
-	j = s;
 	i = 0;
-	while (i < words)
+	while (i < word_count)
 	{
-		if (!ft_next_word(&result[i], &j, c))
+		result[i] = ft_extract_word(&s, c);
+		if (result[i] == 0)
 		{
-			ft_free(result, i);
+			ft_free_array(result, i);
 			return (NULL);
 		}
 		i++;
 	}
-	result[words] = NULL;
+	result[word_count] = NULL;
 	return (result);
 }
-/*
-#include <stdio.h>
-
+/*#include <stdio.h>
 int	main(void)
 {
-	printf("%d \n", ft_arrays_counter("hello world my name is lucy", ' '));
-	printf("%d \n", ft_arrays_counter(" hello world my name is lucy", ' '));
-	printf("%d \n", ft_arrays_counter(" hello   world my name is lucy", ' '));
-	printf("%d \n", ft_arrays_counter("hello world my name is lucy ", ' '));
-	printf("%d \n", ft_arrays_counter("hello world my name is lucy", ' '));
-	return(0);
+	char	**strstr;
+	size_t	i;
+
+	printf("%d \n", ft_count_words("hello universe I am floating in space",
+			' '));
+	strstr = ft_split(" hello univ erse I am floating in space", ' ');
+	i = 0;
+	while (i < 8)
+	{
+		printf("%s|", strstr[i]);
+		i += 1;
+	}
+	return (0);
 }*/
