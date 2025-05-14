@@ -49,8 +49,8 @@ char	*ft_itoa(int nb)
 	}
 	return (ft_strdup(str));
 }
-/*))#include <stdio.h>
-int main(void)
+/*#include <stdio.h>
+int	main(void)
 {
 	printf("%s\n", ft_itoa(1024));
 	printf("%s\n", ft_itoa(-1024));
