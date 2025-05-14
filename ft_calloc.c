@@ -31,12 +31,7 @@ void	*ft_calloc(size_t nmemb, size_t	size)
 int	main(void)
 {
 	void	*ptr = ft_calloc(30, 100);
-	if (ptr)
-	{
-		printf("%p \n", ptr);
-	}
-	else
-	{
-		return (0);
-	}
+	printf("%p \n", ptr);
+	printf("%d \n", ((char *)ptr)[0]);
+	return (0);
 }*/
