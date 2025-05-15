@@ -63,7 +63,7 @@ static char	*ft_extract_word(const char **str, char c)
 	return (word);
 }
 
-static void	ft_free_array(char **array, int size)
+static void	ft_free_arrays(char **array, int size)
 {
 	int	i;
 
@@ -94,7 +94,7 @@ char	**ft_split(char const *s, char c)
 		result[i] = ft_extract_word(&s, c);
 		if (result[i] == 0)
 		{
-			ft_free_array(result, i);
+			ft_free_arrays(result, i);
 			return (NULL);
 		}
 		i++;
