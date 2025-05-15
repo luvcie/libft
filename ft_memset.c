@@ -25,13 +25,13 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
-/*#include <stdio.h>
+/* #include <stdio.h>
 int	main(void)
 {
 	char	str[20];
 
-	ft_memset(str, 'O', 20);
-	str[20] = '\0';
+	ft_memset(str, 'O', 19);
+	str[19] = '\0';
 	printf("%s \n", str);
 	return (0);
 }*/
