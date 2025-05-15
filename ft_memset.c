@@ -35,3 +35,5 @@ int	main(void)
 	printf("%s \n", str);
 	return (0);
 }*/
+// fills first n bytes of memory area pointed by s
+// with the constant byte c
