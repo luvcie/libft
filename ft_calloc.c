@@ -35,3 +35,8 @@ int	main(void)
 	printf("%d \n", ((char *)ptr)[0]);
 	return (0);
 }*/
+// allocates memory for an array of nmemb elements of
+// size bytes each and returns a pointer to the allocated
+// memory. Memory is set to zero. If nmemb or size is 0
+// calloc() returns either NULL or unique pointer value
+// that can be later passed to free().
