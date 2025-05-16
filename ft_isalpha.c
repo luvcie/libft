@@ -9,9 +9,9 @@
 /*   Updated: 2025/04/28 18:56:49 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isalpha(int letter)
+int	ft_isalpha(int c)
 {
-	if ((letter >= 'a' && letter <= 'z') || (letter >= 'A' && letter <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}
