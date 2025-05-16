@@ -14,17 +14,17 @@
 void	*ft_calloc(size_t nmemb, size_t	size)
 {
 	char	*ptr;
-	size_t	total;
+	size_t	total_bytes;
 
 	if (nmemb == 0 || size == 0)
-		total = 0;
+		total_bytes = 0;
 	if (size != 0 && nmemb > (INT_MAX / size))
 		return (NULL);
-	total = nmemb * size;
-	ptr = malloc(total);
+	total_bytes = nmemb * size;
+	ptr = malloc(total_bytes);
 	if (ptr == NULL)
 		return (NULL);
-	ft_bzero(ptr, total);
+	ft_bzero(ptr, total_bytes);
 	return (ptr);
 }
 /*#include <stdio.h>
