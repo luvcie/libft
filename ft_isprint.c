@@ -9,9 +9,9 @@
 /*   Updated: 2025/05/02 00:27:03 by lucpardo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-int	ft_isprint(int value)
+int	ft_isprint(int c)
 {
-	if (value >= 32 && value <= 126)
+	if (c >= 32 && c <= 126)
 	{
 		return (1);
 	}
