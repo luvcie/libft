@@ -24,6 +24,13 @@ static size_t	ft_sign(char *str, long *nbl)
 	return (0);
 }
 
+// left to right digit extraction algorithm: 
+// int max is 2147483647, has 10 digits
+// with extract as 10^9 it checks if digit is inside billion range
+// and extracts the same digit dividing by 10^9
+// then removes digit with modulo and move to next place with /= 10 
+// By filling str buffer with zeros there will
+// always be string termination '\0' no matter the amount of digits
 char	*ft_itoa(int nb)
 {
 	long	nbl;
