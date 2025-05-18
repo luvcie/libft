@@ -44,3 +44,4 @@ char	*ft_strrchr(const char *str, int c)
 	printf("%s \n", ft_strrchr("ukelele", 'e'));
 	return (0);
 }*/
+// returns a pointer to the last occurrence of the character c in the string s
