@@ -35,3 +35,5 @@ int	main(void)
 	printf("%s \n", ft_substr("when rain drops", 4, 10));
 	return (0);
 }*/
+// allocates and returns a substring from string 's', 
+// starting at index 'start' with a maximum length 'len'
