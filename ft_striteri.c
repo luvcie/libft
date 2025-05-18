@@ -24,3 +24,18 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		i++;
 	}
 }
+/*#include <stdio.h>
+#include <ctype.h>
+void	ft_f(unsigned int i, char *c)
+{
+	*c = toupper(*c);
+}
+
+int	main(void)
+{
+	char str[] = "ooooo";
+	printf("%s \n", str);
+	ft_striteri(str, ft_f);
+    printf("%s\n", str);
+    return (0);
+}*/
