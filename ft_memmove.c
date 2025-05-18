@@ -47,3 +47,10 @@ int	main(void)
 	printf("%s \n", dst);
 	return (0);
 }*/
+// copies memory area, handling overlap by 
+// going backwards
+// n-- while condition uses current value of n
+// and then decreases it by 1.
+// ex.  n is now 5, and 5 > 0 is true, so
+// n is now 4, and 4 > 0 is true, so...
+// n is now 3 ...
