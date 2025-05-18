@@ -37,3 +37,4 @@ int	main(void)
 	printf("%s\n", ft_strnstr("heat from fire fire from heat", "from fire", 90));
 	return (0);
 }*/
+// locates a substring in the first n bytes of a string
