@@ -33,7 +33,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	return (str);
 }
 
-#include <stdio.h>
+/*#include <stdio.h>
 #include <ctype.h>
 char	ft_rot13(unsigned int i, char c)
 {
@@ -54,7 +54,7 @@ int	main(void)
 	printf("%s\n", result);
 	free(result);
 	return (0);
-}
+}*/
 // s: The string to iterate over.
 // f: The function to apply to each character.
 // return: The string created from the successive applications of ’f’. 
