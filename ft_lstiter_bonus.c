@@ -24,6 +24,26 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		node = node->next;
 	}
 }
+/*
+#include <stdio.h>
+void	printf_weew(void *content)
+{
+	printf("%s\n", (char *)content);
+}
+int	main(void)
+{
+	t_list	*node0;
+	t_list	*node1;
+	t_list	*node2;
+
+	node0 = ft_lstnew("weew");
+	node1 = ft_lstnew("wlissa");
+	node2 = ft_lstnew("giggling");
+
+	node0->next = node1;
+	node1->next = node2;
+	ft_lstiter(node0, printf_weew);
+}*/
 // iterates through list 'lst' and applies function f
 // to content of each node.
 // lst: address of pointer to a node
