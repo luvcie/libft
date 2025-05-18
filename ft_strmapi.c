@@ -32,6 +32,29 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	str[i] = '\0';
 	return (str);
 }
+
+#include <stdio.h>
+#include <ctype.h>
+char	ft_rot13(unsigned int i, char c)
+{
+	if (isupper(c))
+	{
+		return ((c - 'A' + 13) % 26 + 'A');
+	}
+	if (islower(c))
+	{
+		return ((c - 'a' + 13) % 26 + 'a');
+	}
+	return (c);
+}
+
+int	main(void)
+{
+	char	*result = ft_strmapi("hello world", ft_rot13);
+	printf("%s\n", result);
+	free(result);
+	return (0);
+}
 // s: The string to iterate over.
 // f: The function to apply to each character.
 // return: The string created from the successive applications of ’f’. 
