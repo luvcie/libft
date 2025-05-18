@@ -45,3 +45,4 @@ int	main(void)
 	printf("%s \n", dst);
 	return (0);
 }*/
+// copies a memory area
