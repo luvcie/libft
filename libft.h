@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <strings.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 typedef struct s_list
 {
@@ -23,6 +24,12 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+int					ft_printf(const char *str, ...);
+int					ft_string(char *str);
+int					ft_integer(int n);
+int					ft_unsigned(unsigned int u);
+int					ft_hexadecimal(unsigned int nbr, int is_upper);
+int					ft_pointer(void *ptr);
 int					ft_isalpha(int letter);
 int					ft_isdigit(int digit);
 int					ft_isalnum(int param);
